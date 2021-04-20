@@ -1,9 +1,8 @@
 html, body, #root {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 * {
@@ -25,6 +24,10 @@ h1, h2, h3 {
   width: 100vw;
   height: 50vh;
   background: linear-gradient(0.24turn, #000, indigo);
+}
+
+.content-box {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=App.css.map */

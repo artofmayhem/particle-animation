@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import {useLoader, useFrame} from "react-three-fiber";
 import {useCallback, useMemo, useRef} from "react";
 
-export default function Points() {
+function Points() {
 
     const imgTexture = useLoader(THREE.TextureLoader, sphere)
     const bufferRef = useRef()
@@ -67,3 +67,5 @@ export default function Points() {
         </points>
     )
 }
+
+export default Points;

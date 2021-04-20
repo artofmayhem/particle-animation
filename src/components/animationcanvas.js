@@ -1,15 +1,21 @@
 import {Canvas} from 'react-three-fiber'
 import Points from "./points";
+import {Suspense} from "react";
+import {OrbitControls} from "@react-three/drei";
 
-
-export default function AnimationCanvas() {
+function AnimationCanvas() {
     return (
         <Canvas
             colorManagement={false}
-            camera={{position: [100, 10, 0], fov:40}}
+            camera={{position: [100, 10, 0], fov: 40}}
         >
-            <Points/>
-           {/*<CameraControls />*/}
+            <Suspense fallback={null}>
+                <Points/>
+            </Suspense>
+            {/*<CameraControls />*/}
+            <OrbitControls />
         </Canvas>
     )
 }
+
+export default AnimationCanvas;
