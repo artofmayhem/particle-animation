@@ -1,8 +1,14 @@
 html, body, #root {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+body {
+  background-color: black;
 }
 
 * {
@@ -14,7 +20,7 @@ div {
 }
 
 h1, h2, h3 {
-  font-family: Isotope A, Isotope B, Arial, Helvetica, sans-serif;
+  font-family: Idlewild A, IdleWild B, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 200;
   color: #AAA;
@@ -28,6 +34,40 @@ h1, h2, h3 {
 
 .content-box {
   height: 100vh;
+}
+
+.parallax-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 50vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.parallax-wrapper::before {
+  content: "";
+  width: 100vw;
+  min-height: 120vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-image: url("./assets/parallaxone.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+}
+
+.content {
+  margin: auto auto;
+  padding: 10rem;
+  min-width: auto;
+  background: #222;
+  opacity: 0.9;
+  color: white;
+  text-align: justify;
 }
 
 /*# sourceMappingURL=App.css.map */
