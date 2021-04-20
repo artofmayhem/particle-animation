@@ -1,6 +1,7 @@
 import {Canvas} from 'react-three-fiber'
 import Points from "./points";
 
+
 export default function AnimationCanvas() {
     return (
         <Canvas
